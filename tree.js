@@ -171,3 +171,33 @@ const obj = new SumLeafNodes()
 const sum = obj.sumLeafNodes(root)
 
 console.log(`Sum of all leaf nodesin BT: ${sum}`)
+
+              /**
+              function sumLeafNode(root) {
+if (root === null) {
+return 0;
+}
+
+let sum = 0;
+const stack = [root]; // where we keep track of all nodes
+
+while (stack.length > 0) {
+const currentNode = stack.pop();
+
+// Check if the current node is a leaf node
+if (currentNode.left === null && currentNode.right === null) {
+sum += currentNode.value;
+}
+
+// Push right and left children to the stack if they exist
+if (currentNode.right !== null) {
+stack.push(currentNode.right);
+}
+if (currentNode.left !== null) {
+stack.push(currentNode.left);
+}
+}
+
+return sum;
+}
+              */
